@@ -1,15 +1,15 @@
 package JavaSE.OO.fangfa;
 /**
- * @author ÍõÓ­´º
- *ForÑ­»·Àı×Ó
- *±àĞ´ForÑ­»·ÕÒ³ö1-100ÖĞËùÓĞµÄËØÊı
+ * @author ç‹è¿æ˜¥
+ *Forå¾ªç¯ä¾‹å­
+ *ç¼–å†™Forå¾ªç¯æ‰¾å‡º1-100ä¸­æ‰€æœ‰çš„ç´ æ•°
  *
- *ÖªÊ¶µã£º
- *	forÑ­»·µÄÊ¹ÓÃ
- *	forÑ­»·Ç¶Ì×
- *	±ê¼Ç
+ *çŸ¥è¯†ç‚¹ï¼š
+ *	forå¾ªç¯çš„ä½¿ç”¨
+ *	forå¾ªç¯åµŒå¥—
+ *	æ ‡è®°
  *	break
- *	Í³¼Æ
+ *	ç»Ÿè®¡
  */
 public class ForTest {
 
@@ -17,22 +17,22 @@ public class ForTest {
 		// TODO Auto-generated method stub
 		/*
 		 int i=14;
-		 boolean isSuShu=true;//Ä¬ÈÏ½«i¿´×öÒ»¸öËØÊı¡¾±ê¼ÇÔÚ¿ª·¢ÖĞ±È½Ï³£ÓÃ¡¿
+		 boolean isSuShu=true;//é»˜è®¤å°†içœ‹åšä¸€ä¸ªç´ æ•°ã€æ ‡è®°åœ¨å¼€å‘ä¸­æ¯”è¾ƒå¸¸ç”¨ã€‘
 		 for(int j=2;j<i;j++) {
 			 if(i%j==0) {
-				 //·ÇËØÊı
+				 //éç´ æ•°
 				 isSuShu=true;
-				 //ÒÑ¾­ÖªµÀiÊÇ·ÇËØÊı£¬Ìø³öÑ­»·£¬Ğ§ÂÊ½Ï¸ß
+				 //å·²ç»çŸ¥é“iæ˜¯éç´ æ•°ï¼Œè·³å‡ºå¾ªç¯ï¼Œæ•ˆç‡è¾ƒé«˜
 				 break;
 			 }
 		 }
-		 System.out.println(isSuShu ? i+"ÊÇËØÊı" : i+"²»ÊÇËØÊı");
+		 System.out.println(isSuShu ? i+"æ˜¯ç´ æ•°" : i+"ä¸æ˜¯ç´ æ•°");
 		*/
 		
-		//Éı¼¶°æ¡¾¼ÓÈëÍ³¼Æ»úÖÆ¡¿
+		//å‡çº§ç‰ˆã€åŠ å…¥ç»Ÿè®¡æœºåˆ¶ã€‘
 		int count = 0;
 		for(int i=2;i<=100;i++) {
-			//ÕâÀïµÄ´úÂëÖ»ÅĞ¶ÏiÊÇ·ñÎªËØÊı
+			//è¿™é‡Œçš„ä»£ç åªåˆ¤æ–­iæ˜¯å¦ä¸ºç´ æ•°
 			boolean isSuShu=true;
 			for(int j=2;j<i;j++) {
 				if(i%j==0) {
@@ -45,7 +45,7 @@ public class ForTest {
 				count++;
 				if(count==8) {
 					System.out.println();
-					//¹éÁã
+					//å½’é›¶
 					count = 0;
 				}
 			}
