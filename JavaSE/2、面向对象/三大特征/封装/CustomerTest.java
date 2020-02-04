@@ -1,11 +1,11 @@
 package com.node.javese.day09.test003;
 class Customer {
-	//属性
+	//脢么脨脭
 		private int id;
 		private String name;
 		private int age;
 		private String addr;
-	//setter and getter 方法
+	//setter and getter 路陆路篓
 		public int getId() {
 			return id;
 		}
