@@ -1,26 +1,26 @@
 package com.node.javese.day09.test003;
 /**
- * ·â×°²½Öè
- * 1.ÊôĞÔË½ÓĞ»¯,ÓÃprivate¹Ø¼ü×Ö
- * 2.Ìá¹©¼òµ¥²Ù×÷Èë¿Ú
+ * å°è£…æ­¥éª¤
+ * 1.å±æ€§ç§æœ‰åŒ–,ç”¨privateå…³é”®å­—
+ * 2.æä¾›ç®€å•æ“ä½œå…¥å£
  * 
- * ·ÃÎÊÊôĞÔÁ½ÖÖ·½Ê½
- * 1.¶ÁÈ¡ get 
- * 2.ĞŞ¸Ä set
+ * è®¿é—®å±æ€§ä¸¤ç§æ–¹å¼
+ * 1.è¯»å– get 
+ * 2.ä¿®æ”¹ set
  * 
- * get·½·¨ÃüÃû¹æ·¶(¶ÁÈ¡ÓĞ·µ»ØÖµ)
+ * getæ–¹æ³•å‘½åè§„èŒƒ(è¯»å–æœ‰è¿”å›å€¼)
  * public int getAge(){
  * 		return age;
  * }
  * 
- * set·½·¨ÃüÃû¹æ·¶(ĞŞ¸ÄÎŞ·µ»ØÖµ)
+ * setæ–¹æ³•å‘½åè§„èŒƒ(ä¿®æ”¹æ— è¿”å›å€¼)
  * public void getAge(int a){
  * 		age = a;
  * }
  *
- *setter and getter·½·¨ÎŞstatic¹Ø¼ü×Ö
- *ÓĞstatic¹Ø¼ü×Öµ÷ÓÃ£ºÀàÃû.·½·¨Ãû(Êµ²Î)
- *ÎŞstatic¹Ø¼ü×Öµ÷ÓÃ£ºÒıÓÃ.·½·¨Ãû(Êµ²Î)
+ *setter and getteræ–¹æ³•æ— staticå…³é”®å­—
+ *æœ‰staticå…³é”®å­—è°ƒç”¨ï¼šç±»å.æ–¹æ³•å(å®å‚)
+ *æ— staticå…³é”®å­—è°ƒç”¨ï¼šå¼•ç”¨.æ–¹æ³•å(å®å‚)
  */
 class User {
 	
@@ -28,7 +28,7 @@ class User {
 	
 	public void setAge(int a) {
 		if(a<0||a>150) {
-			System.out.println("²»ºÏ·¨");
+			System.out.println("ä¸åˆæ³•");
 			return;
 		}
 		age = a;
@@ -45,9 +45,9 @@ public class UserTest {
 
 		User user = new User();
 		//System.out.println(user.age);
-		//ĞŞ¸Ä
+		//ä¿®æ”¹
 		user.setAge(-100);
-		//¶ÁÈ¡
+		//è¯»å–
 		System.out.println(user.getAge());
 	}
 
