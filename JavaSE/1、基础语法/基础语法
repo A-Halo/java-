@@ -100,5 +100,6 @@ Java控制语句分为7种：
 注意：switch后面只能跟int类型，但是后面括号中可以填写byte/short/char类型，因为可以自动转换
 return结束main方法
 break结束循环
-
+10、方法
+11、递归
 
