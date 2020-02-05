@@ -154,7 +154,7 @@ Student.class 自定义的
     3、访问控制权限修饰符可以修饰类，变量，方法....
     4、当某个数据只希望子类使用，使用protected修饰符
     5、修饰符的范围：private<缺省<protected<public
-    6、类只能使用public 或 缺省修饰
+    6、类只能使用public 或 缺省修饰【内部类除外】
 	
 	
 	
