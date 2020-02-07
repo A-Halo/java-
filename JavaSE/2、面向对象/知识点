@@ -158,5 +158,6 @@ Student.class 自定义的
 12、super关键字
 13、抽象类
 14、接口
-	
+15、Object类中的方法：finalize方法，toString方法，equals方法，hashCode方法
+16、内部类：静态内部类，成员内部类，局部内部类，匿名内部类
 	
