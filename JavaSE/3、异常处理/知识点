@@ -1,1 +1,44 @@
+异常
+1、异常是什么
+  		1、异常模拟的是现实世界中不正常的事件
+  		2、java中采用类去模拟异常
+  		3、类是可以创建对象的
+  			例：NullPointerException e=0x1234;
+ 			e是引用类型，e中保存的内存地址指向堆中的对象
+  			这个对象一定是NullPointerException类型，这个
+  			异常就表示真实存在的异常事件。NullPointerException是一类异常
+  			抢劫是一类异常，张三被抢劫就是一个异常事件
+2、异常机制的作用
+  程序发生异常事件之后，为我们输出了详细的信息，程序员根据这个信息可以处理程序，使程序更加健壮
+3、异常的分类
+  		所有的异常都是可以抛出的
+  		Throwable：
+  			Error：java程序运行过程中如果出现了错误，错误是不能处理，只能退出jvm，
+  				     例如：StackOverflowError：栈内存溢出，不能处理，只能退出jvm
+  			Exception：异常是可以处理的，如果没有处理，则程序退出jvm
+RuntimeException：运行时异常，所有的RuntimeException的子类都是运行时异常，在编写阶段不需要对它进行处理，发生几率较低
+编译时异常：所有的Exception的直接子类都是"编译时异常"，发生几率较高所有的编译时异常，要求程序员在编写程序阶段，必须对它进行处理，如果不处理的话，编译无法通过
+  		处理异常有两种方式：捕捉:try...catch...
+声明抛出:就是在方法声明的位置上使用throws关键字抛出异常
+4、处理异常的两种方式
+  		1、声明抛出 throws
+  			在方法声明的位置上使用throws关键字向上抛出异常
+  		2、捕捉 try...catch..
+5、异常中的方法：异常中的方法
+  	1、getMessage()
+  	2、printStackTrace()
+6、关于finally语句块
+  	1、finally语句块可以直接和try语句块联用。try...finally...
+  	2、try..catch...finally也可以
+  	3、在finally语句块中的代码一定会执行
+    4、finally程序块一定会执行，所以通常在程序中为了保证某资源一定会释放，所以一般在finally语句块中释放资源
+  区分final，finalize，finally
+final表示不可变的，用来声明变量，方法，修饰的类无法被继承，final static 是常量
+  		finalize是GC回收器回收零引用的对象前执行的方法
+  		finally通常配合try语句执行异常代码块，为了保证一定会执行的一段的代码
+7、自定义异常：
+  	1、编译时异常，直接继承Exception
+  	2、运行时异常，直接继承RuntimeException
+  完整应用：ExceptionTest06
+8、重写的方法不能比被重写的方法抛出更宽泛的异常
 
