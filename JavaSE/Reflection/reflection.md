@@ -16,34 +16,35 @@
 		同一个字节码文件(*.class)在一次程序运行过程中，只会被加载一次，不论通过哪一种方式获取的Class对象都是同一个。
 
 ```java
-public void test3(){
-//方式一：调用运行时类的属性：.class
-Class<Person> clazz1 = Person.class;
-System.out.println(clazz1);//class com.review.reflection.Person,person类本身
-//方式二：通过运行时类的对象,调用getClass()方法
-Person p1=new Person();
-Class<? extends Person> clazz2 = p1.getClass();
-System.out.println(clazz2);//class com.review.reflection.Person,person类本身
-//方式三：调用Class的静态方法.forName(String classPath)
-try {
-    Class<?> clazz3 = Class.forName("com.review.reflection.Person");
-    System.out.println(clazz3);
-} catch (ClassNotFoundException e) {
-    e.printStackTrace();
-}
-System.out.println(clazz1==clazz2);//true
-//上面三种方式获取的都是同一个运行时类，同一个内存地址
-//方式四：使用类的加载器ClassLoader
-try {
-    ClassLoader classLoader = Person.class.getClassLoader();
-    Class<?> clazz4 = classLoader.loadClass("com.review.reflection.Person");
-    System.out.println(clazz4);//com.review.reflection.Person
-    System.out.println(clazz1==clazz4);//true
-} catch (ClassNotFoundException e) {
-    e.printStackTrace();
-}
-//四种方式获取的运行时类都是一样的，地址相同
-}
+@Test
+    public void test3(){
+        //方式一：调用运行时类的属性：.class
+        Class<Person> clazz1 = Person.class;
+        System.out.println(clazz1);//class com.review.reflection.Person,person类本身
+        //方式二：通过运行时类的对象,调用getClass()方法
+        Person p1=new Person();
+        Class<? extends Person> clazz2 = p1.getClass();
+        System.out.println(clazz2);//class com.review.reflection.Person,person类本身
+        //方式三：调用Class的静态方法.forName(String classPath)
+        try {
+            Class<?> clazz3 = Class.forName("com.review.reflection.Person");
+            System.out.println(clazz3);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        System.out.println(clazz1==clazz2);//true
+        //上面三种方式获取的都是同一个运行时类，同一个内存地址
+        //方式四：使用类的加载器ClassLoader
+        try {
+            ClassLoader classLoader = Person.class.getClassLoader();
+            Class<?> clazz4 = classLoader.loadClass("com.review.reflection.Person");
+            System.out.println(clazz4);//com.review.reflection.Person
+            System.out.println(clazz1==clazz4);//true
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //四种方式获取的运行时类都是一样的，地址相同
+    }
 ```
 * Class对象功能：
 	* 获取功能：
