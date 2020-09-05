@@ -15,31 +15,6 @@
 	* 结论：
 		同一个字节码文件(*.class)在一次程序运行过程中，只会被加载一次，不论通过哪一种方式获取的Class对象都是同一个。
 
-
-* Class对象功能：
-	* 获取功能：
-		1. 获取成员变量们
-			* Field[] getFields() ：获取所有public修饰的成员变量
-			* Field getField(String name)   获取指定名称的 public修饰的成员变量
-
-			* Field[] getDeclaredFields()  获取所有的成员变量，不考虑修饰符
-			* Field getDeclaredField(String name)  
-		2. 获取构造方法们
-			* Constructor<?>[] getConstructors()  
-			* Constructor<T> getConstructor(类<?>... parameterTypes)  
-
-			* Constructor<T> getDeclaredConstructor(类<?>... parameterTypes)  
-			* Constructor<?>[] getDeclaredConstructors()  
-		3. 获取成员方法们：
-			* Method[] getMethods()  
-			* Method getMethod(String name, 类<?>... parameterTypes)  
-
-			* Method[] getDeclaredMethods()  
-			* Method getDeclaredMethod(String name, 类<?>... parameterTypes)  
-
-		4. 获取全类名	
-			* String getName()  
-
 	```
 	public void test3(){
         //方式一：调用运行时类的属性：.class
@@ -68,8 +43,33 @@
             e.printStackTrace();
         }
         //四种方式获取的运行时类都是一样的，地址相同
-    }
+    	}
 	```
+* Class对象功能：
+	* 获取功能：
+		1. 获取成员变量们
+			* Field[] getFields() ：获取所有public修饰的成员变量
+			* Field getField(String name)   获取指定名称的 public修饰的成员变量
+
+			* Field[] getDeclaredFields()  获取所有的成员变量，不考虑修饰符
+			* Field getDeclaredField(String name)  
+		2. 获取构造方法们
+			* Constructor<?>[] getConstructors()  
+			* Constructor<T> getConstructor(类<?>... parameterTypes)  
+
+			* Constructor<T> getDeclaredConstructor(类<?>... parameterTypes)  
+			* Constructor<?>[] getDeclaredConstructors()  
+		3. 获取成员方法们：
+			* Method[] getMethods()  
+			* Method getMethod(String name, 类<?>... parameterTypes)  
+
+			* Method[] getDeclaredMethods()  
+			* Method getDeclaredMethod(String name, 类<?>... parameterTypes)  
+
+		4. 获取全类名	
+			* String getName()  
+
+	
 * Field：成员变量
 	* 操作：
 		1. 设置值
