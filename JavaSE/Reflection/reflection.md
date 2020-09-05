@@ -15,7 +15,7 @@
 	* 结论：
 		同一个字节码文件(*.class)在一次程序运行过程中，只会被加载一次，不论通过哪一种方式获取的Class对象都是同一个。
 
-```
+```java
 public void test3(){
 //方式一：调用运行时类的属性：.class
 Class<Person> clazz1 = Person.class;
