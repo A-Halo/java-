@@ -18,7 +18,7 @@ Reflection（反射）是被视为动态语言的关键，反射机制允许程�
 
 ### 1.3 反射相关的主要API
 
--  `java.lang.Class`:代表一个类
+- `java.lang.Class`:代表一个类
 - `java.lang.reflect.Method`:代表类的方法
 - `java.lang.reflect.Field`:代表类的成员变量
 - `java.lang.reflect.Constructor`:代表类的构造器
@@ -29,7 +29,7 @@ Reflection（反射）是被视为动态语言的关键，反射机制允许程�
 
 
 ```java
-	@Test
+    @Test
     public void test2() throws Exception {
         Class<Person> clazz = Person.class;
         //通过反射创建Person类对象
@@ -86,7 +86,7 @@ Reflection（反射）是被视为动态语言的关键，反射机制允许程�
 ### 1.5 四种获取Class类实例的方式
 
 ```java
-	@Test
+    @Test
     public void test3(){
         //方式一：调用运行时类的属性：.class
         Class<Person> clazz1 = Person.class;
@@ -150,7 +150,7 @@ Java源文件(*.java) ——Java编译器——> 字节码文件(*.class) ——
 3. 系统类加载器:负责`java-classpath`或`java.class.path`所指的目录下的类与`jar`包装入工作.(最常用)
 
 ```java
-	@Test
+    @Test
     public void test1() {
         //对于自定义类，使用系统类加载器加载
         ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();//由系统类加载器加载
@@ -170,7 +170,7 @@ Java源文件(*.java) ——Java编译器——> 字节码文件(*.class) ——
 **应用：使用ClassLoader加载配置文件**
 
 ```java
-	@Test
+    @Test
     public void test2() throws Exception {
         Properties properties=new Properties();
         //此时文件默认在当前的module下
@@ -204,7 +204,7 @@ Java源文件(*.java) ——Java编译器——> 字节码文件(*.class) ——
 2. 便于子类继承此运行时类时，默认调用super()时，保证父类此构造器
 
 ```java
-	@Test
+    @Test
     public void test1() throws Exception {
         Class<Person> clazz = Person.class;
         /*
